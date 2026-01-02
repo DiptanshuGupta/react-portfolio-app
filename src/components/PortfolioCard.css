@@ -1,0 +1,222 @@
+
+/* PortfolioCard.css */
+.portfolio-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.portfolio-card-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 120px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  padding-bottom: 20px;
+}
+.portfolio-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.portfolio-details {
+  padding: 30px 25px 25px;
+  text-align: center;
+}
+.portfolio-title {
+  font-size: 1.5em;
+  margin-bottom: 4px;
+}
+.portfolio-name {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+.portfolio-skills {
+  font-size: 1em;
+  margin-bottom: 8px;
+  text-align: left;
+}
+.skills-list {
+  margin-bottom: 20px;
+}
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.skill-badge {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.skill-badge:hover {
+  background-color: #007bff;
+  color: white;
+  cursor: default;
+}
+.skills-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+.skills-nav button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.skills-nav button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.theme-likes-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #f0f0f0;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #e63946;
+  font-weight: 600;
+}
+
+.likes .heart {
+  font-size: 1.2em;
+  transition: transform 0.2s ease;
+}
+
+.likes:hover .heart {
+  transform: scale(1.2);
+}
+
+.dark {
+  background: #222;
+  color: #eee;
+}
+
+.dark .portfolio-card-header {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+}
+
+.dark .theme-toggle {
+  border-color: #555;
+  color: #eee;
+}
+/* Default (Light Theme) */
+body {
+  background-color: #f9f9f9;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-theme .portfolio-card {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-theme .portfolio-card-header {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+}
+
+body.dark-theme .portfolio-description {
+  color: #ccc;
+}
+
+body.dark-theme .theme-toggle {
+  border-color: #555;
+  color: #eee;
+}
+
+body.dark-theme .contact-button {
+  background-color: #444;
+}
+
+body.dark-theme .contact-button:hover {
+  background-color: #666;
+}
+.portfolio-description {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0 0 25px 0;
+}
+.portfolio-phone {
+  color: #28a745;
+  font-size: 1.1em;
+  margin-bottom: 12px;
+}
+.portfolio-phone:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.contact-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.contact-button:hover {
+  background-color: #0056b3;
+}
+
